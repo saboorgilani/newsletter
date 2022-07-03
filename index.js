@@ -32,11 +32,11 @@ app.post("/",function(req,res){
     };
     const jData=JSON.stringify(data);
 
-    const url="https://us11.api.mailchimp.com/3.0/lists/c986d81ed9";
+    const url="https://us11.api.mailchimp.com/3.0/lists/'your mailchimp audience Id'";
 
     const options={
         method:"POST",
-        auth:"key:3b323ac3788a12de7749a58801e2577f-us11"
+        auth:"key:'Your mailchimp api id'"
     }
     const request=https.request(url,options,function(response){
         if(response.statusCode===200){
